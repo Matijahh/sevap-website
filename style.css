@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -97,8 +101,99 @@ body{
     padding: 0;
 }
 
+.container .image-container .small-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 30px 0 0 0;
+    padding: 0;
+}
+
 .container .image-container img{
     width: 100%;
     height: 400px;
     object-fit: cover;
+}
+
+.container #about-us,
+.container #mission,
+.container #members{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container #about-us .title,
+.container #mission .title,
+.container #members .title{
+    font-size: 30px;
+}
+
+.container #about-us .breakline,
+.container #mission .breakline,
+.container #members .breakline{
+    width: 400px;
+    height: 1px;
+    background-color: lightgrey;
+    border: none;
+}
+
+.container #about-us .description,
+.container #members .description{
+    width: 600px;
+    margin-top: 20px;
+}
+
+.container #mission .mission-container{
+    width: 100%;
+    margin-top: 30px;
+    height: 380px;
+    background: url('./images/nature-background.jpg');
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container #mission .mission-container .mission-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.container #mission .mission-container .mission-item{
+    z-index: 2;
+}
+
+.container #mission .mission-container .mission-item .icon{
+    width: 90px;
+}
+
+.container #mission .mission-container .mission-item .title{
+    font-size: 22px;
+    margin: 20px 0;
+    font-weight: bold;
+    padding: 0;
+    color: white;
+}
+
+.container #mission .mission-container .mission-item .description{
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    width: 340px;
 }
